@@ -14,7 +14,7 @@ RUN apt-get install -y --no-install-recommends \
     pkg-config \
     curl \
     gcc-multilib \
-    && curl https://sh.rustup.rs -sSf | sh -s -- -y --default-host i686-unknown-linux-gnu \
+    && export RUSTUP_UNPACK_RAM=230000000 && curl https://sh.rustup.rs -sSf | sh -s -- -y --default-host i686-unknown-linux-gnu \
     && git init \
     && git remote add origin https://github.com/tgstation/rust-g
 
